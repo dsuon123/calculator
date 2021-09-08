@@ -1,0 +1,63 @@
+<!DOCTYPE html>  
+<html lang="en">  
+  
+     <head>  
+          <meta charset="UTF-8">  
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+          <title>Calculator</title>  
+          <link href="calc.css" rel="stylesheet">    
+     </head>  
+  
+     <body>  
+           
+          <h1 style="text-align: center; color:rgb(228, 8, 8);"><b>Calculator</b></h1>  
+          <div class="calculator-grid">  
+               <div class="output">   
+                <input type="text" name="display" id="display"> 
+               </div>  
+                 
+               <button onClick="data('+')" class="+">+</button>
+            <button onclick="data(1)" class="one">1</button>
+            <button onclick="data(2)" class="two">2</button>
+            <button onclick="data(3)" class="three">3</button>
+            <button onclick="data('/')" class="divide">/</button>
+            <button onclick="data(4)" class="four">4</button>
+            <button onclick="data(5)" class="five">5</button>
+            <button onclick="data(6)" class="six">6</button>
+            <button onclick="data('*')" class="multiply">*</button>
+            <button onclick="data(8)" class="eight">8</button>
+            <button onclick="data(9)" class="nine">9</button>
+            <button onclick="data(0)" >0</button>
+            <button onclick="data('-')" >-</button>
+            <button onClick="C()" >C</button>
+            <button onClick="eq()"class="span-two">=</button>
+          </div>  
+     </body>  
+  
+</html> 
+<script>
+   let result = document.getElementById("display");
+   let data = (number)=>{
+    result.value+=number;
+   }
+
+   let eq = ()=>{
+       try{
+           result.value=eval(result.value)
+       }
+       catch(err){
+           alert("enter a valid input")
+       }
+   }
+   function C(){
+       result.value=" ";
+   }
+   
+
+</script>
+<!-- Resources-->
+<!-- https://codeburst.io/making-a-calculator-with-basic-html-css-and-javascript-part-1-1e4288f0bea1 -->
+<!-- https://www.c-sharpcorner.com/blogs/how-to-build-calculator-in-javascript -->
+<!-- https://www.freecodecamp.org/news/html-button-onclick-javascript-click-event-tutorial/ -->
+<!-- https://www.w3schools.com/jsref/jsref_try_catch.asp#:~:text=Parameter%20Values%20%20%20%20Parameter%20%20,of%20code%20to%20be%20executed%20r%20...%20 -->
